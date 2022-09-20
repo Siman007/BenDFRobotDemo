@@ -18,7 +18,8 @@ basic.clearScreen()
 basic.showIcon(IconNames.Happy)
 basic.forever(function () {
     if (stop == 1) {
-        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
+        basic.showIcon(IconNames.Heart)
+        maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
     } else {
         u = maqueen.Ultrasonic(PingUnit.Centimeters)
         if (u < 20) {
@@ -41,11 +42,10 @@ basic.forever(function () {
             maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 0)
             maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOff)
             maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOff)
-            basic.clearScreen()
-            basic.showIcon(IconNames.Happy)
         } else {
         	
         }
+        basic.showIcon(IconNames.Happy)
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
         basic.pause(100)
     }
