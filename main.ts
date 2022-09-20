@@ -1,4 +1,7 @@
 input.onSound(DetectedSound.Loud, function () {
+	
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     if (stop == 0) {
         stop = 1
     } else {
